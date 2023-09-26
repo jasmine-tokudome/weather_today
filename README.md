@@ -48,4 +48,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 以下のAPIを利用させていただきました。
+
 https://open-meteo.com/
