@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'This gem provides you with weather information for a specified date.'
   spec.description = 'Currently, it is only available for locations within Japan.'
   spec.homepage = 'https://github.com/jasmine-tokudome/weather_today/tree/main'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 3.2.0'
 
   spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 

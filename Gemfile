@@ -9,7 +9,9 @@ gem 'rake', '~> 13.0'
 
 gem 'rubocop', '~> 1.21'
 
-group :test do
+group :development do
   gem 'rspec', '~> 3.0'
+  gem 'rubocop-rake'
+  gem 'rubocop-rspec'
   gem 'webmock'
 end
