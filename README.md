@@ -35,42 +35,36 @@ Reference
 Example usage:
 
 ```shell
-ruby -Ilib ./exe/exec_weather_today.rb tokyo
-{
-  "Date": ["2023-09-27"],
-  "Weather": ["Cloudy"],
-  "Max Temperature": [28.3],
-  "Min Temperature": [21.5],
-  "Sunrise": ["2023-09-27T05:32"],
-  "Sunset": ["2023-09-27T17:31"],
-  "UV Index": [5.9]
-}
+$ ruby -Ilib ./exe/exec_weather_today.rb tokyo
+    {"日時"=>["2023-09-27"],
+    "天気"=>["曇り"],
+    "最高気温"=>[28.3],
+    "最低気温"=>[21.5],
+    "日の出時刻"=>["2023-09-27T05:32"],
+    "日の入り時刻"=>["2023-09-27T17:31"],
+    "UV指数"=>[5.9]}
 ```
 
 ```shell
 ruby -Ilib ./exe/exec_weather_today.rb okinawa
-{
-  "Date": ["2023-09-27"],
-  "Weather": ["Light Drizzle"],
-  "Max Temperature": [31.6],
-  "Min Temperature": [27.0],
-  "Sunrise": ["2023-09-27T06:19"],
-  "Sunset": ["2023-09-27T18:21"],
-  "UV Index": [7.6]
-}
+{"日時"=>["2023-09-27"],
+    "天気"=>["霧雨: 軽い"],
+    "最高気温"=>[31.6],
+    "最低気温"=>[27.0],
+    "日の出時刻"=>["2023-09-27T06:19"],
+    "日の入り時刻"=>["2023-09-27T18:21"],
+    "UV指数"=>[7.6]}
 ```
 
 ```shell
 ruby -Ilib ./exe/exec_weather_today.rb hokkaido
-{
-  "Date": ["2023-09-27"],
-  "Weather": ["Cloudy"],
-  "Max Temperature": [23.9],
-  "Min Temperature": [14.3],
-  "Sunrise": ["2023-09-27T05:26"],
-  "Sunset": ["2023-09-27T17:24"],
-  "UV Index": [5.05]
-}
+{"日時"=>["2023-09-27"],
+    "天気"=>["曇り"],
+    "最高気温"=>[23.9],
+    "最低気温"=>[14.3],
+    "日の出時刻"=>["2023-09-27T05:26"],
+    "日の入り時刻"=>["2023-09-27T17:24"],
+    "UV指数"=>[5.05]}
 ```
 
 ## License
