@@ -1,51 +1,74 @@
+## WeatherToday
+
+This gem provides you with weather information for a specified date. Currently, it is only available for locations within Japan.
+
 ## Installation
 
-    $ gem install pkg/weather_wizard-0.1.2.gem
+To install this gem on your local machine, add the following line to your application's Gemfile:
+
+```ruby
+gem 'weather_today'
+```
+
+Then, execute the following command:
+
+```shell
+bundle install
+```
+
+Alternatively, you can also install the gem using the following command:
+
+```shell
+gem install weather_today-0.1.1.gem
+```
 
 ## Usage
 
-都道府県ごとの今日の気象情報をハッシュで取得できるgemです。
+The WeatherToday module supplies weather information for your application. You can display the output information using the following script:
 
-取得できる情報は以下のコマンドで確認できます。
+```shell
+ruby -Ilib ./exe/exec_weather_today.rb <prefecture>
+```
 
-    $ ruby -Ilib ./exe/exec_weather_wizard.rb <location>
+Reference
 
-(参考)
+Example usage:
 
-    ❯ ruby -Ilib ./exe/exec_weather_wizard.rb kagoshima
-    日時 : 2023-09-26
-    天気 : 晴れ時々曇り
-    最高気温 : 28.9
-    最低気温 : 25.2
-    日の出時刻 : 2023-09-25T21:08
-    日の入り時刻 : 2023-09-26T09:10
-    UV指数 : 6.85
+```shell
+$ ruby -Ilib ./exe/exec_weather_today.rb tokyo
+    {"日時"=>["2023-09-27"],
+    "天気"=>["曇り"],
+    "最高気温"=>[28.3],
+    "最低気温"=>[21.5],
+    "日の出時刻"=>["2023-09-27T05:32"],
+    "日の入り時刻"=>["2023-09-27T17:31"],
+    "UV指数"=>[5.9]}
+```
 
-    ❯ ruby -Ilib ./exe/exec_weather_wizard.rb tokyo
-    日時 : 2023-09-26
-    天気 : 曇り
-    最高気温 : 27.4
-    最低気温 : 20.9
-    日の出時刻 : 2023-09-25T20:31
-    日の入り時刻 : 2023-09-26T08:33
-    UV指数 : 6.15
+```shell
+ruby -Ilib ./exe/exec_weather_today.rb okinawa
+{"日時"=>["2023-09-27"],
+    "天気"=>["霧雨: 軽い"],
+    "最高気温"=>[31.6],
+    "最低気温"=>[27.0],
+    "日の出時刻"=>["2023-09-27T06:19"],
+    "日の入り時刻"=>["2023-09-27T18:21"],
+    "UV指数"=>[7.6]}
+```
 
-    ❯ ruby -Ilib ./exe/exec_weather_wizard.rb okinawa
-    日時 : 2023-09-26
-    天気 : 霧雨: 中程度
-    最高気温 : 31.0
-    最低気温 : 27.1
-    日の出時刻 : 2023-09-25T21:19
-    日の入り時刻 : 2023-09-26T09:22
-    UV指数 : 7.65
+```shell
+ruby -Ilib ./exe/exec_weather_today.rb hokkaido
+{"日時"=>["2023-09-27"],
+    "天気"=>["曇り"],
+    "最高気温"=>[23.9],
+    "最低気温"=>[14.3],
+    "日の出時刻"=>["2023-09-27T05:26"],
+    "日の入り時刻"=>["2023-09-27T17:24"],
+    "UV指数"=>[5.05]}
+```
 
-## Development
+## License
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+This gem utilizes the "Free Weather API." For further details, please refer to [Open_Meteo](https://open-meteo.com/).
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-以下のAPIを利用させていただきました。
-https://open-meteo.com/
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
