@@ -37,7 +37,6 @@ module WeatherToday
       raise Error, 'Failed to fetch weather data' unless response.is_a?(Net::HTTPSuccess)
 
       weather_data = JSON.parse(response.body)
-
       transform_and_print(weather_data['daily'])
     end
 
