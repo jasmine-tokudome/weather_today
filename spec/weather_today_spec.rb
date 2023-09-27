@@ -36,6 +36,11 @@ RSpec.describe WeatherToday::WeatherClient do
 
       # HTTPステータスコードが成功 (200) であることを確認
       expect(weather_data).to be_a(Hash) # weather_dataがハッシュであることを確認
+    end
+
+    it 'includes required keys in the response' do
+      weather_client = WeatherToday::WeatherClient.new('kagoshima')
+      weather_data = weather_client.fetch_weather_data
 
       # レスポンスの中身を詳細に検証する
       expect(weather_data).to have_key('UV指数')
