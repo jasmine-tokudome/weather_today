@@ -1,5 +1,7 @@
+
+
 type ResultsPropsType = {
-    results{
+    results : {
     country: string;
     cityName: string;
     tempreture: string;
@@ -8,10 +10,10 @@ type ResultsPropsType = {
     }
 }
 
-const Result = (props: ResultsPropsType) => {
+const Results = (props: ResultsPropsType) => {
     return(
 <h1>気象データ {props.results.country}</h1>
     );
 };
 
-export default Result
+export default Results
